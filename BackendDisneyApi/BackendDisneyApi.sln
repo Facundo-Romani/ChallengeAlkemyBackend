@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRestDisney", "ApiRestDisney\ApiRestDisney.csproj", "{327876DB-6C5B-4C8C-A3C0-445D9AEB96ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendDisneyApi", "BackendDisneyApi\BackendDisneyApi.csproj", "{18772B3E-6047-47E0-9025-FA096B1FA149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{327876DB-6C5B-4C8C-A3C0-445D9AEB96ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{327876DB-6C5B-4C8C-A3C0-445D9AEB96ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{327876DB-6C5B-4C8C-A3C0-445D9AEB96ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{327876DB-6C5B-4C8C-A3C0-445D9AEB96ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18772B3E-6047-47E0-9025-FA096B1FA149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18772B3E-6047-47E0-9025-FA096B1FA149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18772B3E-6047-47E0-9025-FA096B1FA149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18772B3E-6047-47E0-9025-FA096B1FA149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7821C3CA-D9E8-4258-93D4-158A843204BE}
+		SolutionGuid = {30F2FFC6-D7A3-479B-A9E0-798E8256DFED}
 	EndGlobalSection
 EndGlobal

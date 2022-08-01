@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "GEKBIfLtaJeOa9TBFnhGkgxF0ydTKZNOUTsUmPwwid8=",
+  "Source": "BackendDisneyApi",
+  "BasePath": "_content/BackendDisneyApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
