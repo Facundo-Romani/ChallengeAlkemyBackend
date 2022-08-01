@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using BackendDisneyApi.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackendDisneyApi.Models.DataModels
