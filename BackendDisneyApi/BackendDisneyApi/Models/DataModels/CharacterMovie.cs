@@ -1,7 +1,7 @@
 ﻿using BackendDisneyApi.Models.DataModels;
 using System.ComponentModel.DataAnnotations;
 
-namespace AppDisney.Models
+namespace BackendDisneyApi.Models
 {
     public class CharacterMovie
     {

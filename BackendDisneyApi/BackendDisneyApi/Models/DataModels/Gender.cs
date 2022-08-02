@@ -1,8 +1,9 @@
 ﻿using BackendDisneyApi.Base;
+using BackendDisneyApi.Models;
 using System;
 using System.Collections.Generic;
 
-namespace AppDisney.Models
+namespace BackendDisneyAp.Models
 {
     public class Gender : BaseEntity   
     {

@@ -10,7 +10,7 @@ namespace BackendDisneyApi.Models.DataModels
         public int? Weight { get; set; }
         public string History { get; set; } = string.Empty;
 
-        //navigation
-        //public List<CharacterMovie> CharacterMovies { get; set; }
+        // Lista para generar la relación ForeignKey.
+        public List<CharacterMovie> CharacterMovies { get; set; }
     }
 }
