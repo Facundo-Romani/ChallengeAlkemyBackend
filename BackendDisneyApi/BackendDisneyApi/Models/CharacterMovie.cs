@@ -1,5 +1,4 @@
-﻿using BackendDisneyApi.Models.DataModels;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BackendDisneyApi.Models
 {

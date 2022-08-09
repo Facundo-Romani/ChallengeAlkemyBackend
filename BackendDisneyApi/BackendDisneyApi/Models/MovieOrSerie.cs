@@ -1,6 +1,4 @@
-﻿
-using BackendDisneyAp.Models;
-using BackendDisneyApi.Base;
+﻿using BackendDisneyApi.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

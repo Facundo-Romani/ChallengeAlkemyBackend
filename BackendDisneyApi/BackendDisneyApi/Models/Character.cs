@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BackendDisneyApi.Models.DataModels
+namespace BackendDisneyApi.Models
 {
     public class Character : BaseEntity
     {

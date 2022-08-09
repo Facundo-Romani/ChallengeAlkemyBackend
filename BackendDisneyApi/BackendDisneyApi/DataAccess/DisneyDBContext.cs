@@ -1,7 +1,6 @@
-﻿using BackendDisneyAp.Models;
-using BackendDisneyApi.Models;
-using BackendDisneyApi.Models.DataModels;
+﻿using BackendDisneyApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace BackendDisneyApi.DataAccess
 {
@@ -35,9 +34,9 @@ namespace BackendDisneyApi.DataAccess
 
 
         // ADD DbSets (Tables DB).
-        public DbSet<Character>? characters { get; set; }
         public DbSet<CharacterMovie> CharacterMovies { get; set; }
-        public DbSet<Gender> Genders{ get; set; }
+        public DbSet<Character> Characters { get; set; }
+        public DbSet<Gender> Genders { get; set; }
         public DbSet<MovieOrSerie> MoviesOrSeries { get; set; }
 
     }
