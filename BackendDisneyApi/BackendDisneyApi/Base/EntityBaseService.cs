@@ -1,5 +1,4 @@
-﻿
-using BackendDisneyApi.Base;
+﻿using BackendDisneyApi.Base;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,9 +8,9 @@ namespace BackendDisneyApi.Services.Implements
 {
     public class EntityBaseService<TEntity> : IEntityBaseService<TEntity> where TEntity : class
     {
-        private readonly Base.IEntityBaseRepository<TEntity>_repository;
+        private readonly IEntityBaseRepository<TEntity> _repository;
 
-        public EntityBaseService(Base.IEntityBaseRepository<TEntity> repository)
+        public EntityBaseService(IEntityBaseRepository<TEntity> repository)
         {
             _repository = repository;
         }

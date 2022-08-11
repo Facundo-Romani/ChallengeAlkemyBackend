@@ -55,7 +55,7 @@ namespace BackendDisneyApi.Controllers
             {
                 var charVM = await _Service.GetDetails(id);
 
-                return Ok(charVM);
+                return Ok(charVM); 
             }
 
             catch (Exception ex)

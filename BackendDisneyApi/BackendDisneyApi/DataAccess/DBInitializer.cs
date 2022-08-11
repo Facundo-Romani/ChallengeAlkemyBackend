@@ -27,7 +27,7 @@ namespace BackendDisneyApi.DataAccess
                             Age = 23,
                             Weight = 45,
                             History = "History of character 1",
-                            Image = "https://prod.liveshare.vsengsaas.visualstudio.com/join?12955AB6BEE18FDA0DD7362F89BBE78557AB",
+                            Image = "https://i.pinimg.com/originals/17/49/6b/17496b719809f38ade5b253adea8425e.jpg",
                         },
 
                         new Character()
@@ -36,7 +36,7 @@ namespace BackendDisneyApi.DataAccess
                             Age = 36,
                             Weight = 80,
                             History = "History of character 2",
-                            Image = "https://prod.liveshare.vsengsaas.visualstudio.com/join?12955AB6BEE18FDA0DD7362F89BBE78557AB",
+                            Image = "https://i.pinimg.com/originals/fb/f9/0a/fbf90a83b680f1a67914be509d455148.jpg",
                         },
 
                         new Character()
@@ -45,7 +45,7 @@ namespace BackendDisneyApi.DataAccess
                             Age = 10,
                             Weight = 47,
                             History = "History of character 3",
-                            Image = "https://prod.liveshare.vsengsaas.visualstudio.com/join?12955AB6BEE18FDA0DD7362F89BBE78557AB",
+                            Image = "https://i.pinimg.com/originals/20/8e/c2/208ec262bb1fe6db269c561d35183f70.jpg",
                         },
 
                         new Character()
@@ -54,7 +54,7 @@ namespace BackendDisneyApi.DataAccess
                             Age = 24,
                             Weight = 75,
                             History = "History of character 4",
-                            Image = "https://prod.liveshare.vsengsaas.visualstudio.com/join?12955AB6BEE18FDA0DD7362F89BBE78557AB",
+                            Image = "https://i.pinimg.com/originals/24/a1/ce/24a1cec879f34f570f006689a1402c9c.jpg",
                         },
 
                         new Character()
@@ -63,7 +63,7 @@ namespace BackendDisneyApi.DataAccess
                             Age = 67,
                             Weight = 96,
                             History = "History of character 5",
-                            Image = "https://prod.liveshare.vsengsaas.visualstudio.com/join?12955AB6BEE18FDA0DD7362F89BBE78557AB",
+                            Image = "https://i.pinimg.com/originals/13/e1/76/13e176fe0db4f23fcc07f28c1d545a44.jpg",
                         },
 
                         new Character()
@@ -72,7 +72,7 @@ namespace BackendDisneyApi.DataAccess
                             Age = 23,
                             Weight = 45,
                             History = "History of character 6",
-                            Image = "https://prod.liveshare.vsengsaas.visualstudio.com/join?12955AB6BEE18FDA0DD7362F89BBE78557AB",
+                            Image = "https://i.pinimg.com/originals/e4/2d/d8/e42dd8233d63df237bb321a94589657e.jpg",
                         },
                     });
                     context.SaveChanges();
