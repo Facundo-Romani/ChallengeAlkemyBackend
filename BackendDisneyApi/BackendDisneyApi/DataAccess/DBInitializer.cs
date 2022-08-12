@@ -85,7 +85,7 @@ namespace BackendDisneyApi.DataAccess
 
                         new MovieOrSerie()
                         {
-                            Name = "Movie 1",
+                            Name = "La Dama y el Vagabundo",
                             Image = "Image",
                             CreatedAt = DateTime.Now,
                             Calification = 3,
@@ -94,7 +94,7 @@ namespace BackendDisneyApi.DataAccess
 
                         new MovieOrSerie()
                         {
-                            Name = "Movie 2",
+                            Name = "Aladin",
                             Image = "Image",
                             CreatedAt = DateTime.Now,
                             Calification = 4,
@@ -103,7 +103,7 @@ namespace BackendDisneyApi.DataAccess
 
                         new MovieOrSerie()
                         {
-                            Name = "Movie 3",
+                            Name = "La Bella y la Bestia",
                             Image = "Image",
                             CreatedAt = DateTime.Now,
                             Calification = 5,
@@ -112,7 +112,7 @@ namespace BackendDisneyApi.DataAccess
 
                         new MovieOrSerie()
                         {
-                            Name = "Movie 4",
+                            Name = "Los Aristogatos",
                             Image = "Image",
                             CreatedAt = DateTime.Now,
                             Calification = 2,
@@ -121,7 +121,7 @@ namespace BackendDisneyApi.DataAccess
 
                         new MovieOrSerie()
                         {
-                            Name = "Movie 5",
+                            Name = "La Sirenita",
                             Image = "Image",
                             CreatedAt = DateTime.Now,
                             Calification = 1,
@@ -130,7 +130,7 @@ namespace BackendDisneyApi.DataAccess
 
                         new MovieOrSerie()
                         {
-                            Name = "Movie 6",
+                            Name = "La Espada en la piedra",
                             Image = "Image",
                             CreatedAt = DateTime.Now,
                             Calification = 3,

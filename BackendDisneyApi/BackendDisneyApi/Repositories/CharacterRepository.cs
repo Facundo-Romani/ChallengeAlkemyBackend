@@ -4,6 +4,7 @@ using BackendDisneyApi.Models;
 using BackendDisneyApi.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Linq;
 
 namespace BackendDisneyApi.Repositories
 {
@@ -35,8 +36,7 @@ namespace BackendDisneyApi.Repositories
 
         public async Task<Character> GetDetails(int id)
         {
-            var currentChar = await _context.Characters.FirstAsync(
-                x => x.Id == id);
+            var currentChar = await _context.Characters.FirstAsync(x => x.Id == id);
 
             return currentChar;
         }
@@ -71,7 +71,7 @@ namespace BackendDisneyApi.Repositories
             foreach (var movieId in model.IdMovieOrSerie)
             {
                 var newCharMovie = new CharacterMovie()
-                {
+                {  
                     CharacterId = model.Id,
                     MovieOrSerieId = movieId
                 };

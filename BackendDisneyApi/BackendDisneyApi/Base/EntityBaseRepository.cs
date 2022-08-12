@@ -26,7 +26,7 @@ namespace BackendDisneyApi.Base
             entityEntry.State = EntityState.Deleted;
 
             await _context.SaveChangesAsync();
-        }
+        } 
 
         public async Task<IEnumerable<TEntity>> GetAllAsync() =>
             await _context.Set<TEntity>().ToListAsync();

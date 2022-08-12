@@ -12,9 +12,9 @@ namespace BackendDisneyApi.Services.Implements
 
         public EntityBaseService(IEntityBaseRepository<TEntity> repository)
         {
-            _repository = repository;
+            _repository = repository; 
         }
-
+        
         public Task DeleteAsync(int id)
         {
             return _repository.DeleteAsync(id);
