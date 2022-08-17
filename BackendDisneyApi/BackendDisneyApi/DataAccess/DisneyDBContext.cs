@@ -16,7 +16,7 @@ namespace BackendDisneyApi.DataAccess
             modelBuilder.Entity<CharacterMovie>().HasKey(a => new
             {
                 a.MovieOrSerieId,
-                a.CharacterId
+                a.CharacterId 
             });
 
             modelBuilder.Entity<CharacterMovie>()
@@ -29,7 +29,7 @@ namespace BackendDisneyApi.DataAccess
                 .WithMany(a => a.CharacterMovies)
                 .HasForeignKey(c => c.CharacterId);
 
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder); 
         }
 
 
