@@ -53,11 +53,6 @@ app.MapControllers();
 
 app.Run();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
 
-//DBInitializer.Seed(app);
 
 
