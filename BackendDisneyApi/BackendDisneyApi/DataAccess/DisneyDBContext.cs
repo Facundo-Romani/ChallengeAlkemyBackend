@@ -1,12 +1,13 @@
 ﻿using BackendDisneyApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using System.Linq;
 
 namespace BackendDisneyApi.DataAccess
 {
     public class DisneyDBContext : DbContext
     {
-        public DisneyDBContext(DbContextOptions<DisneyDBContext> options): base(options)
+        public DisneyDBContext(DbContextOptions<DisneyDBContext> options) : base(options)
         {
 
         }
@@ -16,7 +17,7 @@ namespace BackendDisneyApi.DataAccess
             modelBuilder.Entity<CharacterMovie>().HasKey(a => new
             {
                 a.MovieOrSerieId,
-                a.CharacterId 
+                a.CharacterId
             });
 
             modelBuilder.Entity<CharacterMovie>()
@@ -29,7 +30,7 @@ namespace BackendDisneyApi.DataAccess
                 .WithMany(a => a.CharacterMovies)
                 .HasForeignKey(c => c.CharacterId);
 
-            base.OnModelCreating(modelBuilder); 
+            base.OnModelCreating(modelBuilder);
         }
 
 
@@ -38,6 +39,9 @@ namespace BackendDisneyApi.DataAccess
         public DbSet<Character> Characters { get; set; }
         public DbSet<Gender> Genders { get; set; }
         public DbSet<MovieOrSerie> MoviesOrSeries { get; set; }
+        public DbSet<User>? Users { set; get; }
+
+
 
     }
 

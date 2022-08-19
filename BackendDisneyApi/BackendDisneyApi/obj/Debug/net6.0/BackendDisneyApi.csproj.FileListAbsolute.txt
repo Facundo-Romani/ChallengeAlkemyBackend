@@ -264,3 +264,7 @@ C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\Backe
 C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\SendGrid.dll
+C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\IdentityServer3.dll
+C:\Users\Facun\Desktop\Facundo\Programación\Alkemy\ChallengeAlkemyBackend\BackendDisneyApi\BackendDisneyApi\bin\Debug\net6.0\Owin.dll

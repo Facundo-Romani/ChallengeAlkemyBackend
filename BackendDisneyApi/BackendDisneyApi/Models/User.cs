@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations;
-
-namespace BackendDisneyApi.Models
+﻿namespace BackendDisneyApi.Models
 {
-
-    public class User : IdentityUser
+    public class User
     {
-        public bool IsActive { get; set; }
+        public int UserID { set; get; }
+        public string? Name { set; get; }
+        public string? Password { set; get; }
+        public string? Email { set; get; }
     }
-
 }
