@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackendDisneyApi.Migrations
 {
     [DbContext(typeof(DisneyDBContext))]
-    [Migration("20220819221154_MyMigration")]
-    partial class MyMigration
+    [Migration("20220820022131_MyFirstMigration")]
+    partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -121,28 +121,6 @@ namespace BackendDisneyApi.Migrations
                     b.HasIndex("GenderId");
 
                     b.ToTable("MoviesOrSeries");
-                });
-
-            modelBuilder.Entity("BackendDisneyApi.Models.User", b =>
-                {
-                    b.Property<int>("UserID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"), 1L, 1);
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserID");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("BackendDisneyApi.Models.CharacterMovie", b =>

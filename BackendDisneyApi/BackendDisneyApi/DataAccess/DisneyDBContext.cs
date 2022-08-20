@@ -40,8 +40,6 @@ namespace BackendDisneyApi.DataAccess
         public DbSet<Gender> Genders { get; set; }
         public DbSet<MovieOrSerie> MoviesOrSeries { get; set; }
 
-
-
     }
 
 }

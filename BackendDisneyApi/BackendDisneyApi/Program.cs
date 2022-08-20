@@ -11,6 +11,7 @@ using BackendDisneyApi.Models;
 using BackendDisneyApi.Services.Implements;
 using BackendDisneyApi.Base;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,11 +20,11 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DisneyDB");
 
 // Connection DB SQL Users
-var userConn = builder.Configuration.GetConnectionString("UserConnection");
+var userString = builder.Configuration.GetConnectionString("UserConnection");
 
 // Add Context
 builder.Services.AddDbContext<DisneyDBContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddDbContext<UserDBContext>(x => x.UseSqlServer(userConn));
+builder.Services.AddDbContext<UserDBContext>(options => options.UseSqlServer(userString));
 
 // Add services to the container  
 builder.Services.AddControllers();
