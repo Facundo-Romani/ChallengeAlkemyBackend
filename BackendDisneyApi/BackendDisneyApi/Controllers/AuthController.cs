@@ -1,6 +1,7 @@
 ﻿using BackendDisneyApi.Models;
 using BackendDisneyApi.Services;
-using BackendDisneyApi.ViewModels;
+using BackendDisneyApi.ViewModels.Auth.Login;
+using BackendDisneyApi.ViewModels.Auth.Register;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -9,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace BackendDisneyApi.Controllers
 {
@@ -16,7 +18,7 @@ namespace BackendDisneyApi.Controllers
     [Route(template: "api/[controller]")]
     public class AuthenticationController : ControllerBase
     {
-        //Registro
+        // Registro
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IMailService _mailService;
@@ -34,16 +36,16 @@ namespace BackendDisneyApi.Controllers
         public async Task<IActionResult> Register(RegistrationRequestViewModel model) //async para poder usar await
         {
 
-            //Revisar si existe usuario
+            // Revisar si existe usuario
             var userExists = await _userManager.FindByNameAsync(model.Username);
 
-            //Si existe, devolver error
+            // Si existe, devolver error
             if (userExists != null)
             {
                 return StatusCode(StatusCodes.Status400BadRequest);
             }
 
-            //Si no existe, registrar al usuario
+            //S i no existe, registrar al usuario
             var user = new User
             {
                 UserName = model.Username,
@@ -68,9 +70,71 @@ namespace BackendDisneyApi.Controllers
             {
                 status = "Success",
                 Message = $"User created Succesfully!"
-
-
             }); ;
         }
+
+        // Login
+        [HttpPost]
+        [Route(template: "login")]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            // Chequear que el usuario exista y que la password provista sea correcta
+            var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, false, false);
+
+            if (result.Succeeded)
+            {
+                var currentUser = await _userManager.FindByNameAsync(model.Username);
+                if (currentUser.IsActive)
+                {
+                    // Generar el token
+                    // Devolver Roken creado [y que no devuelva toda la info]
+                    return Ok(await GetToken(currentUser));
+
+                }
+            }
+
+            return StatusCode(StatusCodes.Status401Unauthorized, new
+            {
+                status = "Error",
+                Message = $"User {model.Username} not authorized!"
+            });
+
+
+
+        }
+
+
+        // Token
+        private async Task<LoginResponseViewModel> GetToken(User currentUser)
+        {
+            var userRoles = await _userManager.GetRolesAsync(currentUser);
+
+            var authClaims = new List<Claim>()
+            {
+                new Claim (ClaimTypes.Name,currentUser.UserName),
+                new Claim (JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
+
+            // agregamos anuestra lista de privilegios o claims todos los privilegios de nuestro usuario
+            authClaims.AddRange(userRoles.Select(x => new Claim(ClaimTypes.Role, x)));
+
+            //levantamos nuestro signin key
+            var authSignInKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("KeySecretaSuperLargaDeAutorizacion")); //Encargado de proveernos info con la llave secreta para ingresar a la aplicación
+
+            // creo el token
+            var token = new JwtSecurityToken(
+                issuer: "https://localhost:7030",
+                audience: "https://localhost:7030",
+                expires: DateTime.Now.AddHours(1),
+                claims: authClaims,
+                signingCredentials: new SigningCredentials(authSignInKey, SecurityAlgorithms.HmacSha256));
+
+            return new LoginResponseViewModel
+            {
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                ValidTo = token.ValidTo
+            };
+        }
+
     }
 }

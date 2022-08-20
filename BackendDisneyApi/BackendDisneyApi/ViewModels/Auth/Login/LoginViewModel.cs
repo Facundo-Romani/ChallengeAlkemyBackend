@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System;
 
-namespace BackendDisneyApi.ViewModels
+namespace BackendDisneyApi.ViewModels.Auth.Login
 {
     public class LoginViewModel
     {
