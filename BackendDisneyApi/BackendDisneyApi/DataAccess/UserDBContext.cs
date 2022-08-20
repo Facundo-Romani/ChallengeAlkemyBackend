@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BackendDisneyApi.DataAccess
 {
-    public class UserDBContext : IdentityDbContext<UserLogin>
+    public class UserDBContext : IdentityDbContext<User>
     {
         private const string Schema = "users";
 

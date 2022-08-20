@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace BackendDisneyApi.Models.Auth
 {
 
-    public class UserLogin : IdentityUser
+    public class User : IdentityUser
     {
         public bool IsActive { get; set; }
 
