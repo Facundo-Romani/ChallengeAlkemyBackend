@@ -28,7 +28,7 @@ namespace BackendDisneyApi.Controllers
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            //_/*mailService = mailService;*/
+            //_mailService = mailService;
         }
 
         [HttpPost]
