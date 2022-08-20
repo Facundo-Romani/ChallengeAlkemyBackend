@@ -21,14 +21,14 @@ namespace BackendDisneyApi.Controllers
         // Registro
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
-        private readonly IMailService _mailService;
+        //private readonly IMailService _mailService;
 
 
-        public AuthenticationController(UserManager<User> userManager, SignInManager<User> signInManager, IMailService mailService)
+        public AuthenticationController(UserManager<User> userManager, SignInManager<User> signInManager/*, IMailService mailService*/)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _mailService = mailService;
+            //_/*mailService = mailService;*/
         }
 
         [HttpPost]
@@ -64,13 +64,13 @@ namespace BackendDisneyApi.Controllers
 
             }
 
-            await _mailService.SendMail(user);
+            //await _mailService.SendMail(user);
 
             return Ok(new
             {
                 status = "Success",
                 Message = $"User created Succesfully!"
-            }); ;
+            }); 
         }
 
         // Login
