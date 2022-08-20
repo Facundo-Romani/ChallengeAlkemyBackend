@@ -1,13 +1,13 @@
-﻿//using BackendDisneyApi.Models.Auth;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Threading.Tasks;
+﻿using BackendDisneyApi.Models.Auth;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-//namespace BackendDisneyApi.Services
-//{
-//    public interface IMailService
-//    {
-//        Task SendMail(UserLogin user);
-//    }
-//}
+namespace BackendDisneyApi.Services
+{
+    public interface IMailService
+    {
+        Task SendMail(User user);
+    }
+}
